@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!-- defines this document as HTML5-->
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+	<title>\Who\I.am</title>
+	<link rel="stylesheet" href="theStyle.css">
+	<script type="text/javascript" src="js\theAnimation.js"></script>
+
+	<style>
+		.flex-container1 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+  			height: calc(100vh - 100px);
+	 		background-color: transparent /*#f1f1f1*/;
+	}
+
+		.flex-container1 > div {
+		  	background-color: transparent /*rgba(0, 0, 0, 0.46)*/;
+		  	margin: 10px;
+	}
+	</style>	
+</head>
+
+<body>
+	<div class="cursor"><img id="difcursor" src="flicks/cursor.png"></div>
+	<header>
+		<a href="file:///C:/Users/tmitc/Downloads/timothy_scrggs/theSite.html"><img class="logo"src="flicks/logo.png" alt="logo"></a>
+		<nav>
+			<ul class="nav_links">
+				<li><a class="active" href="C:\Users\tmitc\Downloads\timothy_scrggs\theWhoiam.html">\Who\I.am</a></li>
+				<li><a href="C:\Users\tmitc\Downloads\timothy_scrggs\theProjects.html">\Projec.ts</a></li>
+				<li><a href="C:\Users\tmitc\Downloads\timothy_scrggs\theResume.html">\Resu.me</a></li>
+			</ul>
+		</nav>
+		<a href="file:///C:/Users/tmitc/Downloads/timothy_scrggs/theSite.html#contact"><button style="float: right" class="buttonset">\Conta.ct</button></a>
+		<div class="site-title">
+			<h2>\TS.M</h2>
+			<p>Project Showcase</p>
+		</div>
+	</header>
+	<div class="loader">
+		<span class="setup" style="--i:1;">L</span>
+		<span class="setup" style="--i:2;">o</span>
+		<span class="setup" style="--i:3;">a</span>
+		<span class="setup" style="--i:4;">d</span>
+		<span class="setup" style="--i:5;">i</span>
+		<span class="setup" style="--i:6;">n</span>
+		<span class="setup" style="--i:7;">g</span>
+		<span class="setup" style="--i:8;">.</span>
+		<span class="setup" style="--i:9;">.</span>
+		<span class="setup" style="--i:10;">.</span>
+	</div>
+	<div class="site-content">
+		<div class="flex-container1">
+			<div>
+				<div class="pulse"><span style="--i:0;"></span><span style="--i:1;"></span></div>
+				<div class="gotchaabout">
+					<h6 id="phrase">Whew..It's dark in here! Turn the lights on.<br>&rarr;</h6>
+				</div>
+				<img src="flicks/black-half-circle.png" id="icon">
+
+				<p style="padding: 10px; margin: 5px">
+
+				<h1 style="width: 12rem">\Who\I.Am</h1>
+				<p style="width: 9rem" class="title-subheader">Get to know me.</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<h2> Available for freelance opportunities.</h2>
+		<div class="footerinner">
+    		<p>Linkedin</p>
+    		<button onclick="topFunction()" id="topbttn" title="Top"><img id="topage" class="toppage" src="SVGs/arrow.svg"></button>
+    		<p style="transform: rotate(180deg)">Github</p>
+    	</div>
+		<h3>2023. Timothy Scruggs-Mitchell.</h3>
+	</div>
+	<script language="javascript">
+
+		let links = Array.from(document.querySelectorAll("a"));
+
+		var icon = document.getElementById("icon");
+		var difcursor = document.getElementById("difcursor");
+		var phrase = document.getElementById("phrase");
+		var topage = document.getElementById("topage");
+
+		const cursor = document.querySelector(".cursor")
+			document.addEventListener('mousemove', (e) => {
+				cursor.style.left = e.clientX + 'px';
+				cursor.style.top = e.clientY + 'px';
+			})
+
+		links.forEach(link =>{
+				link.addEventListener('mouseover', ()=>{
+					cursor.classList.add("grow");
+				})
+				link.addEventListener('mouseleave', ()=>{
+					cursor.classList.remove("grow");
+				})
+			})
+
+		function topFunction(){
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+
+		icon.onclick = function(){
+			document.body.classList.toggle("light-theme");
+			if(document.body.classList.contains("light-theme")){
+				icon.src = "flicks/half-circle.png";
+				topage.src = "SVGs/arrow alt.svg";
+				difcursor.src = "flicks/cursor-alt.png";
+				phrase.innerHTML = "Ahh..It's too bright! Turn out the lights!";
+			}else{
+				icon.src = "flicks/black-half-circle.png";
+				topage.src = "SVGs/arrow.svg";
+				difcursor.src = "flicks/cursor.png";
+				phrase.innerHTML = "Whew..It's dark in here! Turn the lights on.";
+			}
+		}
+
+	</script>
+</body>
+</html> 

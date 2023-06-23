@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Tourney&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+	
+body{
+	font-family: 'inconsolata';
+	min-height: 100vh;
+	overflow-x: hidden;
+	margin-top: 10rem;
+}
+
+header{
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 100px;
+	top: 0;
+}
+
+.navigation{
+	list-style: none;
+	margin: 0;
+}
+
+.navigation li{
+	display: inline-block;
+	padding: 10px 15px;
+}
+
+.navigation a{
+	text-decoration: none;
+	color: darkgray;
+	font-size: 1rem;
+}
+
+.parallax{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: url(flicks/cloud.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.parallax img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20%;
+	pointer-events: none;
+}
+
+.parallax img#right-cloud{
+	position: fixed;
+	width: 65rem;
+	transform: translateX(1500px) translateY(650px);
+}
+
+.parallax img#left-cloud{
+	position: fixed;
+	width: 65rem;
+	transform: translateX(700px) translateY(650px);
+}
+
+.parallax img#middle-cloud{
+	position: fixed;
+	width: 65rem;
+	transform: translateY(650px);
+}
+
+#text{
+	position: absolute;
+	font-size: 5em;
+	color: turquoise;
+	text-shadow: 2px 4px 5px white;
+}
+
+.sec{
+	position: relative;
+	background: radial-gradient(white, skyblue);
+	padding: 30px 100px;
+}
+
+.sec h2{
+	font-size: 3em;
+	color: black;
+	margin-bottom: 10px;
+}
+
+.sec p{
+	font-size: 1em;
+	color: darkgray;
+	font-weight: 300;
+	text-align: justify;
+}
+
+/*-----------falling background--------*/
+
+.falling{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: radial-gradient(white, skyblue);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section .set{
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+section .set div{
+	position: absolute;
+	display: block;
+}
+
+section .set div:nth-child(1)
+{
+	left: 20%;
+	animation: falling 7.5s linear infinite;
+	animation-delay: -7s;
+}
+
+section .set div:nth-child(2)
+{
+	left: 50%;
+	animation: falling 5s linear infinite;
+	animation-delay: -5s;
+}
+
+section .set div:nth-child(3)
+{
+	left: 70%;
+	animation: falling 3s linear infinite;
+	animation-delay: 0s;
+}
+
+section .set div:nth-child(4)
+{
+	left: 0%;
+	animation: falling 8s linear infinite;
+	animation-delay: -3s;
+}
+
+section .set div:nth-child(5)
+{
+	left: 85%;
+	animation: falling 2s linear infinite;
+	animation-delay: -6s;
+}
+
+section .set div:nth-child(6)
+{
+	left: 0%;
+	animation: falling 1.5s linear infinite;
+}
+
+@keyframes falling
+{
+	0%{
+		opacity: 0;
+		top: 110%;
+		transform: translateX(20px) rotate(0deg);
+	}
+	10%{
+		opacity: 1;
+	}
+	100%{
+		top: -10%;
+	}
+}
+
+.set2{
+	z-index: -15;
+	transform: scale(.3);
+	filter: blur(2px);
+}
+
+.set3{
+	z-index: 8;
+	filter: blur(2px);
+}
+
+.proftitle{
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
+
+.fallcont{
+	display: flex;
+	width: 70%;
+	flex-direction: column;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.fallcont p{
+	z-index: -15;
+	font-family: "Tourney", sans-serif;
+	text-align: center;
+	align-items: center;
+	color: skyblue;
+	height: 30%;
+	font-size: 1.2rem;
+	background: rgba(53, 53, 53, 1);
+	padding: 50px;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.86);
+}
+
+.fallcont .pbox{
+	z-index: 9;
+	font-family: "Tourney", sans-serif;
+	text-align: center;
+	align-items: center;
+	color: skyblue;
+	height: 20%;
+	font-size: 1.2rem;
+	background: rgba(53, 53, 53, 1);
+	padding: 50px;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.86);
+}
+
+.fallcont .pbox i{
+	text-align: center;
+	align-items: center;
+	color: skyblue;
+	font-size: 5rem;
+
+}
+
+.fallcont .pbox:nth-child(1){
+	animation: 2s ease-out 0s infinite hover;
+}
+
+.fallcont .pbox:nth-child(2){
+	animation: 2s ease-out 0s infinite hover;
+}
+
+@keyframes hover{
+	0%{
+		transform: translateY(0px);
+	}
+	30%{
+		transform: translateY(-10px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	70%{
+		transform: translateY(10px);
+	}
+	100%{
+		transform: translateY(5px);
+	}
+}
+
+.bgh{
+	width: 100vw;
+	height: 100vh;
+	background: radial-gradient(grey, rgba(0, 0, 0, 0.99));
+}

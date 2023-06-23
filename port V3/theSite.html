@@ -1,0 +1,471 @@
+<!DOCTYPE html> <!-- defines this document as HTML5-->
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+	<title>\TS.M</title>
+	<link rel="stylesheet" href="theStyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js\theAnimation.js"></script>
+
+	<style>
+		.flex-container1 {
+			display: flex;
+			flex-direction: column;
+			z-index: -4;
+			transform-style: preserve-3d;
+			align-items: center;
+			flex-wrap: wrap;
+  			height: calc(100vh - 100px);
+	 		background-color: transparent /*#f1f1f1*/;
+	 		border-bottom-style: solid;
+			border-width: 1px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.46);
+	}
+
+		.flex-container1 > div {
+		  	background-color: transparent /*rgba(0, 0, 0, 0.46)*/;
+		  	margin-top: 12rem;
+	}
+
+		@media screen and (max-width: 1280px){
+			.flex-container1 > div {
+				margin-top: 6rem;
+	}
+}
+
+		.flex-container2 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			overflow: hidden;
+			flex-wrap: wrap;
+	 		background: url(SVGs/cloud.svg) no-repeat/*#f1f1f1*/;
+	 		background-size: 140%;
+			background-position: center;
+			background-attachment: fixed;
+	 		/*
+	 		border-bottom-style: solid;
+			border-width: 1px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.46);
+			*/
+	}
+
+		.flex-container2 > div {
+		  	background-color: transparent /*rgba(0, 0, 0, 0.46)*/;
+		  	margin: 5px;
+	}
+
+		.flex-container3 {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			align-items: center;
+			flex-wrap: wrap;
+			overflow: hidden;
+  			min-height: calc(100vh - 100px);
+	 		background: var(--skyback-color); /*#f1f1f1*/;
+	 		/*
+	 		border-bottom-style: solid;
+			border-width: 1px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.46);
+			*/
+	}
+
+		.flex-container3 > div {
+		  	background-color: transparent /*rgba(0, 0, 0, 0.46)*/;
+		  	margin: 8px;
+	}
+
+		.flex-container4 {
+			display: flex;
+			flex-direction: row;
+			z-index: -1;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+  			height: calc(100vh - 100px);
+	 		background-color: transparent; /*#f1f1f1*/;
+	 		border-top-style: solid;
+			border-width: 1px;
+			box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.46);
+	}
+
+		.flex-container4 > div {
+		  	background-color: transparent /*rgba(0, 0, 0, 0.46)*/;
+		  	margin: 8px;
+	}
+
+		.flex-container5 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			overflow: hidden;
+			height: 3rem;
+			flex-wrap: wrap;
+	 		background: url(SVGs/cloud.svg) no-repeat/*#f1f1f1*/;
+	 		background-size: 140%;
+			background-position: center;
+			background-attachment: fixed;
+	}
+
+		.flex-container5 > div {
+		  	background-color: transparent /*rgba(0, 0, 0, 0.46)*/;
+		  	margin: 5px;
+	}
+
+		#text{
+			position: absolute;
+		
+	}
+	
+	</style>	
+</head>
+
+<body>
+	<div>
+		<div class="parallax-layer">
+			<img id="welcome" src="SVGs/weco.svg">
+		</div>
+	</div>
+	<div class="cursor"><img id="difcursor" src="flicks/cursor.png"></div>
+	<header>
+		<a href="file:///C:/Users/tmitc/Downloads/timothy_scrggs/theSite.html"><img class="logo"src="flicks/logo.png" alt="logo"></a>
+		<nav>
+			<ul class="nav_links">
+				<li><a href="C:\Users\tmitc\Downloads\timothy_scrggs\theWhoiam.html">\Who\I.am</a></li>
+				<li><a href="C:\Users\tmitc\Downloads\timothy_scrggs\theProjects.html">\Projec.ts</a></li>
+				<li><a href="C:\Users\tmitc\Downloads\timothy_scrggs\theResume.html">\Resu.me</a></li>
+			</ul>
+		</nav>
+		<a href="#contact"><button style="float: right" class="buttonset">\Conta.ct</button></a>
+		<div data-speed="-1" class="site-title layer">
+			<h2>\TS.M</h2>
+			<p>Project Showcase</p>
+		</div>
+	</header>
+	<div class="loader">
+		<span class="setup" style="--i:1;">L</span>
+		<span class="setup" style="--i:2;">o</span>
+		<span class="setup" style="--i:3;">a</span>
+		<span class="setup" style="--i:4;">d</span>
+		<span class="setup" style="--i:5;">i</span>
+		<span class="setup" style="--i:6;">n</span>
+		<span class="setup" style="--i:7;">g</span>
+		<span class="setup" style="--i:8;">.</span>
+		<span class="setup" style="--i:9;">.</span>
+		<span class="setup" style="--i:10;">.</span>
+	</div>
+	<div class="wrapper" style="margin:0px;">
+		<div class="site-content">
+			<div class="flex-container1">
+				<div>
+					<div class="pulse"><span style="--i:0;"></span><span style="--i:1;"></span></div>
+					<div class="gotcha">
+						<h6 id="phrase">Whew..It's dark in here! Turn the lights on.<br>&darr;</h6>
+					</div>
+					<img src="flicks/black-half-circle.png" id="icon">
+
+					<p style="margin-top: 1rem"></p>
+
+					<h1 style="font-size: 2.5rem; width: 51rem">Hey, I'm Timothy Scruggs-Mitchell,</h1>
+					<p style="width: 30rem" class = "title-subheader">\U.I-U.X Design.er, \Freelan.ce \Programm.er, \Front\E.nd \Develop.er</p>
+					<p style="padding: 4.5rem;">
+
+					<!--<a class="lastname"><img src="flicks/lastname mitchell.png" alt="lastname"></a>-->
+					<p class="slogan">I like \codi.ng, \creati.ng, and \designi.ng!</p>
+					<p class="callta"><a href="#contact">Let me bring your vision to you!</a></p>
+					<div style="text-align: center" class="aboutbutanim butspace">
+						<a href="C:\Users\tmitc\Downloads\timothy_scrggs\theWhoiam.html"><button style="width: 5rem; margin-top: 2rem" class="buttonset">\About.me</button>
+						</a>
+						<a href="C:\Users\tmitc\Downloads\timothy_scrggs\theProjects.html"><button style="width: 5rem; margin-top: 2rem" class="buttonset">\Projec.ts</button>
+						</a>
+					</div>
+				</div>
+				<div style="flex:1; z-index: -4;" class="bottom">
+					<div data-speed="-4" class="layer">
+						<img style="flex: 25%;"class="imganim1" src="flicks/moon2.png" id="imganim">
+					</div>
+					<div style="flex: 75%; z-index: -4">
+						<p class="preheader">Explore</p>
+						<div class="arrowcon">
+							<a href="#overview"><img class="arrowanim" id="arrow" src="SVGs/arrow.svg"></a>
+						</div>
+					</div>
+				</div>
+			</div> 
+			<div id="overview" class="flex-container2">
+				<p style="padding: 10px; margin: 4px">
+				<section class="thecloud">
+					<div data-speed="3" class="layer">
+						<h1 id="ntext" style="width:15rem">\Overvi.ew</h1>
+						<p style="width:9rem" class="title-subheader">What I'm about.</p>
+					</div>
+					<img src="cloud1.png" id="leftcloud">
+					<img src="cloud2.png" id="middlecloud">
+					<img src="cloud1.png" id="rightcloud">
+					<img src="cloud1.png" id="bottomleftcloud">
+					<img src="cloud1.png" id="bottomrightcloud">
+					<img src="cloud1.png" id="bottommiddlecloud">
+
+				</section>
+				<section class="funfact">
+					<h2>Fun Fact about me:</h2>
+					<p>
+					Skydiving is on my bucket-list.
+					</p>
+				</section>
+				<section class="falling">
+					<div class="fallcont">
+						<div style="flex: 50%;">
+							<p>I am an aspiring UI/UX Designer and Front-End Developer with some experience in javascript. I am currently learning frameworks like React, Node.js, and Three.js. My mission is to collaborate with clients and bring them scalable and efficient products and solutions. I'm looking forward to bringing your vision to you!</p>
+						</div>
+						<div class="proftitle" style="flex: 40%">
+							<div style="flex: 50%;" class="pbox">
+								<h1>Web Developer</h1>
+								<br>
+								<div class="globe"><i class="fa fa-globe" aria-hidden="true"></i></div>
+							</div>
+							<div style="flex: 50%;" class="pbox">
+								<h1>UI/UX Designer</h1>
+								<i class="fa fa-cog fa-spin"></i>
+							</div>
+						</div>
+						<div data-speed="5" class="layer" style="flex: 10%; text-align: center"><a href="C:\Users\tmitc\Downloads\timothy_scrggs\theProjects.html"><button class="buttonset">\View\All\Proje.cts &rarr;</button></a></div>
+					</div>
+					<div class="set">
+						<div><img style="width: 35rem" src="cloud1.png"></div>
+						<div><img style="width: 22rem" src="cloud2.png"></div>
+						<div><img style="width: 29rem" src="cloud3.png"></div>
+						<div><img style="width: 26rem" src="cloud4.png"></div>
+						<div><img style="width: 27rem" src="cloud5.png"></div>
+						<div><img style="width: 31rem" src="cloud6.png"></div>
+					</div>
+					<div class="set set2">
+						<div><img src="cloud2.png"></div>
+						<div><img src="cloud4.png"></div>
+						<div><img src="cloud5.png"></div>
+						<div><img src="cloud6.png"></div>
+						<div><img src="cloud1.png"></div>
+						<div><img src="cloud3.png"></div>
+					</div>
+					<div class="set set3">
+						<div><img style="width: 12rem" src="cloud6.png"></div>
+						<div><img style="width: 36rem" src="cloud5.png"></div>
+						<div><img style="width: 35rem" src="cloud4.png"></div>
+						<div><img style="width: 16rem" src="cloud2.png"></div>
+						<div><img style="width: 24rem" src="cloud3.png"></div>
+						<div><img style="width: 41rem" src="cloud1.png"></div>
+					</div>
+				</section>
+				<p style="padding: 10px; margin: 5px"></p>
+			</div>
+
+			<div class="flex-container3">
+				<p style="padding: 10px; margin: 5px"></p>
+				<div style="z-index: 10">
+					<h1 id="ntext" style="width: 29rem">\Work\Experien.ce</h1>
+					<p style="width: 12rem" class="title-subheader">My career at a glance.</p>
+				</div>
+				<div class="workexp">
+					<div class="workcard">
+						<h2>Freelancer</h2>
+						<h3>No Company</h3>
+						<p>&#8700; Currently pursuing a career in Front-End Development and UI/UX Design.</p>
+						<div>
+							<h5 style="margin-top: 13rem; background: url(flicks/firstver.png) no-repeat;background-size: cover"></h5>
+						</div>
+					</div>
+					<div class="moreinfo">
+						<h2>Mar. 2023 to Present</h2>
+						<h3>Houston, Texas</h3>
+						<br>
+						<h3>Tools Used:</h3>
+						<p>&#8700; HTML/CSS</p>
+						<p>&#8700; JS</p>
+						<p>&#8700; Python</p>
+						<p>&#8700; WordPress</p>
+						<p>&#8700; Docker</p>
+					</div>
+					<div class="workcard">
+						<h2>Hazardous Waste Coordinator</h2>
+						<h3>Amazon</h3>
+						<p>&#8700; Coordinated waste and donation pickups. Managed all documentation pertaining to pickups, Work, Health, and Safety permits, and site waste area inspections. 
+						<br><br>
+						&#8700; Ensured the registration of vendors who would come on site for waste and donation pickups. 
+						<br><br>
+						&#8700; Stored and managed various forms of paperwork, including Bill of Lading, Tax Exemption Forms, Site inspection forms, Memorandum for Disposal, Waste Manifest, etc.
+						</p>
+						<div>
+							<h5 style="margin-top: 2rem; background: url(flicks/amz2.png) no-repeat;background-size: cover">
+							</h5>
+						</div>
+					</div>
+					<div class="moreinfo">
+						<h2>Aug. 2021 to Oct. 2022</h2>
+						<h3>Fresno, Texas</h3>
+						<br>
+						<h3>Tools Used:</h3>
+						<p>&#8700; Waste Tracker</p>
+						<p>&#8700; MS Excel</p>
+						<p>&#8700; Coupa</p>
+						<p>&#8700; Compliance Calendar</p>
+						<p>&#8700; Slack/Chime</p>
+					</div>
+					<div class="workcard">
+						<h2>Online Assistant</h2>
+						<h3>Belhaven University</h3>
+						<p>&#8700; Worked with the team over online courses to troubleshoot issues, correct course material, edit course power points/ lecture videos, and perform any other tasks required. In canvas.
+						<br><br>
+						&#8700; corrected and verified courses not yet published for online students. All relevant work was completed before the course’s published deadline.
+						</p>
+						<div>
+							<h5 style="margin-top: 7rem; background: url(flicks/belhaven.jpg) no-repeat;background-size: cover"></h5>
+						</div>
+					</div>
+					<div class="moreinfo">
+						<h2>Sep. 2017 to Mar. 2020</h2>
+						<h3>Jackson, Mississippi</h3>
+						<br>
+						<h3>Tools Used:</h3>
+						<p>&#8700; Canvas</p>
+						<p>&#8700; MS Word</p>
+						<p>&#8700; MS Excel</p>
+					</div>
+				</div>
+				<p style="z-index: 3" class="slogan">See my full resume <a href="C:\Users\tmitc\Downloads\timothy_scrggs\theResume.html"><button class="dwnldbut">\Resu.me</button></a></p>
+				<div class="moon"><img id="sunrise" src="flicks/moon.png"></div>
+			</div>
+
+			<div class="flex-container5">
+				<h1></h1>
+				<p></p>
+			</div>
+
+			<div id="contact" class="flex-container4">
+				<div style="z-index: 10; margin-bottom: auto" data-speed="2" class="layer">
+					<h1 style="width: 12rem">\Conta.ct</h1>
+					<p style="width: 15rem" class="title-subheader">Feel free to ask anything.</p>
+				</div>
+				<div class="ccardpulse">
+					<div class="blocker"></div>
+					<span style="--i:0;"></span>
+					<span style="--i:1;"></span>
+					<span style="--i:2;"></span>
+				</div>
+				<div class="contactcard">
+					<div class="ccbck"></div>
+					<div class="cctext" style="position: absolute; left: 5rem;">
+						<h3>Send a message.</h3>
+						<h4>Interested? Want to collaborate?<br>Have an exciting project you need<br>
+						help with?</h4>
+						<p>Let's schedule a time to talk!</p>
+						<a ><img style="padding-top: 2rem" class="logo"src="flicks/logo.png" alt="logo"></a>
+					</div>
+					<div style="flex: 50%">
+						<form action="/action_page.php">
+						    <label for="fname">Name</label>
+						    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+						    <label for="email">Email</label>
+						    <input type="text" id="demail" name="nemail" placeholder="Your email..">
+
+						    <label for="country">Country</label>
+						    <select id="country" name="country">
+						    	<option value="usa">USA</option>
+						      	<option value="mexico">Mexico</option>
+						      	<option value="canada">Canada</option>
+						    </select>
+
+						    <label for="subject">Subject</label>
+						    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+							<input type="submit" value="It's Official">
+					    </form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer">
+    		<h2> Available for freelance opportunities.</h2>
+    		<div class="footerinner">
+	    		<p>Linkedin</p>
+	    		<button onclick="topFunction()" id="topbttn" title="Top"><img id="topage" class="toppage" src="SVGs/arrow.svg"></button>
+	    		<p style="transform: rotate(180deg)">Github</p>
+	    	</div>
+    		<h3>2023. Timothy Scruggs-Mitchell.</h3>
+   		</div>
+    </div>
+   <script language="javascript">
+
+   			let links = Array.from(document.querySelectorAll("a"));
+
+			var icon = document.getElementById("icon");
+			var sunrise = document.getElementById("sunrise");
+			var difcursor = document.getElementById("difcursor");
+			var phrase = document.getElementById("phrase");
+			var arrow = document.getElementById("arrow");
+			var welcome = document.getElementById("welcome");
+			var imganim = document.getElementById("imganim");
+			var topage = document.getElementById("topage");
+
+			const cursor = document.querySelector(".cursor")
+			document.addEventListener('mousemove', (e) => {
+				cursor.style.left = e.clientX + 'px';
+				cursor.style.top = e.clientY + 'px';
+			})
+
+			links.forEach(link =>{
+				link.addEventListener('mouseover', ()=>{
+					cursor.classList.add("grow");
+				})
+				link.addEventListener('mouseleave', ()=>{
+					cursor.classList.remove("grow");
+				})
+			})
+
+			function topFunction(){
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+
+			icon.onclick = function(){
+				document.body.classList.toggle("light-theme");
+				if(document.body.classList.contains("light-theme")){
+					icon.src = "flicks/half-circle.png";
+					arrow.src = "SVGs/arrow alt.svg";
+					imganim.src = "flicks/sun2.png";
+					topage.src = "SVGs/arrow alt.svg";
+					welcome.src = "flicks/welcome-alt.png";
+					difcursor.src = "flicks/cursor-alt.png";
+					sunrise.src = "flicks/sun.png";
+					phrase.innerHTML = "Ahh..It's too bright! Turn out the lights!";
+				}else{
+					icon.src = "flicks/black-half-circle.png";
+					arrow.src = "SVGs/arrow.svg";
+					imganim.src = "flicks/moon2.png";
+					topage.src = "SVGs/arrow.svg";
+					welcome.src = "SVGs/weco.svg";
+					difcursor.src = "flicks/cursor.png";
+					sunrise.src = "flicks/moon.png";
+					phrase.innerHTML = "Whew..It's dark in here! Turn the lights on.";
+				}
+			}
+
+			document.addEventListener("mousemove", parallax);
+			function parallax(e) {
+				this.querySelectorAll(".layer").forEach(layer => {
+					const speed = layer.getAttribute("data-speed")
+
+					const x = (window.innerWidth - e.pageX*speed)/100
+					const y = (window.innerWidth - e.pageY*speed)/100
+
+					layer.style.transform = `translateX(${x}px) translatey(${y}px)`
+				})
+			}
+			
+		</script>
+</body>
+</html> 

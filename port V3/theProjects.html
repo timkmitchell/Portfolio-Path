@@ -1,0 +1,356 @@
+<!DOCTYPE html> <!-- defines this document as HTML5-->
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+	<title>\Projec.ts</title>
+	<link rel="stylesheet" href="theStyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js\theAnimation.js"></script>
+
+	<style>
+		.flex-container1 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+  			height: calc(100vh - 100px);
+	 		background-color: transparent /*#f1f1f1*/;
+	}
+
+		.flex-container1 h1{
+			color: var(--tertiary-color);
+			text-align: center;
+			box-sizing: border-box;
+			width: inherit;
+			margin-top: -28rem;
+			position: absolute;
+			border-radius: 50px 50px 0px 0px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.46);
+			font-weight: 300;
+			transition: color 1s;
+			animation: 1s ease-out 0s 1 slideInFromTop;
+	}
+
+		.flex-container1 > div {
+		  	background-color: transparent /*rgba(0, 0, 0, 0.46)*/;
+	}
+
+		.selectwork{
+			background: url(SVGs/cloud.svg) no-repeat/*#f1f1f1*/;
+	 		background-size: 140%;
+			background-position: center;
+			background-attachment: fixed;
+			box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.46);
+		}
+
+		.main {   
+			display: flex;
+			flex: 70%;
+			background-color: transparent;
+			padding: 20px;
+			justify-content: center;
+			overflow: auto;
+			text-overflow: inherit;
+	}
+
+		.main .myworkcont h2{
+			align-items: center;
+			text-align: center;
+			margin: auto;
+			padding: 10px;
+			font-size: 2rem;
+			font-weight: 300;
+			color: var(--tertiary-color);
+			text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.46);
+		}
+
+		.main .myworkcont p{
+			align-items: center;
+			margin: auto; 
+			font-size: 2.5rem;
+			text-align: center;
+			color: var(--tertiary-color);
+		}
+
+		.side {
+			flex: 30%;
+		    background-color: transparent;
+		    border-style: double;
+		    border-bottom: none;
+		    border-top: none;
+		    border-color: black;
+			padding: 20px;
+			align-items: center;
+			justify-content: center;
+	}
+		.row {  
+			display: flex;
+			flex-wrap: wrap;
+	}
+
+		.myworkcont{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+	}
+
+	.mwc1{
+		animation: 2s ease-out 0s infinite slideUpAndDown;
+	}
+
+	</style>	
+</head>
+
+<body>
+	<div class="cursor"><img id="difcursor" src="flicks/cursor.png"></div>
+	<header>
+		<a href="file:///C:/Users/tmitc/Downloads/timothy_scrggs/theSite.html"><img class="logo"src="flicks/logo.png" alt="logo"></a>
+		<nav>
+			<ul class="nav_links">
+				<li><a href="C:\Users\tmitc\Downloads\timothy_scrggs\theWhoiam.html">\Who\I.am</a></li>
+				<li><a class="active" href="C:\Users\tmitc\Downloads\timothy_scrggs\theProjects.html">\Projec.ts</a></li>
+				<li><a href="C:\Users\tmitc\Downloads\timothy_scrggs\theResume.html">\Resu.me</a></li>
+			</ul>
+		</nav>
+		<a href="file:///C:/Users/tmitc/Downloads/timothy_scrggs/theSite.html#contact"><button style="float: right" class="buttonset">\Conta.ct</button></a>
+		<div class="site-title">
+			<h2>\TS.M</h2>
+			<p>Project Showcase</p>
+		</div>
+	</header>
+	<div class="loader">
+		<span class="setup" style="--i:1;">L</span>
+		<span class="setup" style="--i:2;">o</span>
+		<span class="setup" style="--i:3;">a</span>
+		<span class="setup" style="--i:4;">d</span>
+		<span class="setup" style="--i:5;">i</span>
+		<span class="setup" style="--i:6;">n</span>
+		<span class="setup" style="--i:7;">g</span>
+		<span class="setup" style="--i:8;">.</span>
+		<span class="setup" style="--i:9;">.</span>
+		<span class="setup" style="--i:10;">.</span>
+	</div>
+	<div class="site-content">
+		<div>
+			<div class="pulse"><span style="--i:0;"></span><span style="--i:1;"></span></div>
+			<div class="gotchaprojects">
+				<h6 id="phrase">Whew..It's dark in here! Turn the lights on.<br>&larr;</h6>
+			</div>
+			<img src="flicks/black-half-circle.png" id="icon">
+
+			<p style="padding: 10px; margin: 5px">
+
+			<h1 style="width: 12rem">\Projects</h1>
+			<p style="width: 16rem" class="title-subheader">See what I have been working on.</p>
+			<p class="slogan">Browse More<a href="" class="links"><i class="fa fa-github" aria-hidden="true"></i></a></p>
+		</div>
+		<div class="hide"><img id="moonpar" src="flicks/moon2.png"></div>
+		<div class="row">
+			<div class="flex-container1 main">
+				<div class="myworkcont">
+					<div class="mwc1" style="flex: 30%">
+						<p>Selected<br>Work<br><a style="text-decoration: none; color: var(--senary-color);" href="#selectedwork">&#8615;</a></p>
+					</div>
+					<div style="flex: 70%">
+						<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="flex-container1 side">
+				<h1>Featured Project</h1>
+				<div class="featuredcard">
+					<div style="flex: 70%">
+						<img src="">
+					</div>
+					<div style="flex: 30%" class="feattitle">
+						<div class="featanim">
+							<h2>Project Title</h2>
+							<small>--|Web Development|--</small>
+						</div>
+						<div class="fta">
+							<small>--|Made With|--</small>
+						</div>
+						<div class="featicons">
+							<small><i class="fa fa-html5" aria-hidden="true"></i></small>
+							<small><i class="fa fa-jsfiddle" aria-hidden="true"></i></small>
+						</div>
+						<a style="padding: 8px; margin-left:auto; margin-top:auto" href=""><button class="dwnldbut">View Project</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="selectedwork" class="flex-container1 selectwork">
+			<div class="seletitle" style="position: absolute;">
+				<p style="padding: 10px; margin: 5px">
+				<h6 style="width: 23rem">\Project\Showca.se</h6>
+				<p style="width: 10rem" class="title-subheader">More of my work.</p>
+			</div>
+			<img src="cloud1.png" id="lecloud">
+			<div class="pullme">
+				<img class="armpull" id="" src="flicks/armpull.png">
+				<div class="featuredcard">
+					<div style="flex: 70%">
+						<img src="">
+					</div>
+					<div style="flex: 30%" class="feattitle">
+						<div class="featanim">
+							<h2>Project Title</h2>
+							<small>--|Web Development|--</small>
+						</div>
+						<div class="fta">
+							<small>--|Made With|--</small>
+						</div>
+						<div class="featicons">
+							<small><i class="fa fa-html5" aria-hidden="true"></i></small>
+							<small><i class="fa fa-jsfiddle" aria-hidden="true"></i></small>
+						</div>
+						<a style="padding: 8px; margin-left:auto; margin-top:auto" href=""><button class="dwnldbut">View Project</button></a>
+					</div>
+				</div>
+				<div class="featuredcard">
+					<div style="flex: 70%">
+						<img src="">
+					</div>
+					<div style="flex: 30%" class="feattitle">
+						<div class="featanim">
+							<h2>Project Title</h2>
+							<small>--|Web Development|--</small>
+						</div>
+						<div class="fta">
+							<small>--|Made With|--</small>
+						</div>
+						<div class="featicons">
+							<small><i class="fa fa-html5" aria-hidden="true"></i></small>
+							<small><i class="fa fa-jsfiddle" aria-hidden="true"></i></small>
+						</div>
+						<a style="padding: 8px; margin-left:auto; margin-top:auto" href=""><button class="dwnldbut">View Project</button></a>
+					</div>
+				</div>
+				<div class="featuredcard">
+					<div style="flex: 70%">
+						<img src="">
+					</div>
+					<div style="flex: 30%" class="feattitle">
+						<div class="featanim">
+							<h2>Project Title</h2>
+							<small>--|Web Development|--</small>
+						</div>
+						<div class="fta">
+							<small>--|Made With|--</small>
+						</div>
+						<div class="featicons">
+							<small><i class="fa fa-html5" aria-hidden="true"></i></small>
+							<small><i class="fa fa-jsfiddle" aria-hidden="true"></i></small>
+						</div>
+						<a style="padding: 8px; margin-left:auto; margin-top:auto" href=""><button class="dwnldbut">View Project</button></a>
+					</div>
+				</div>
+				<div class="featuredcard">
+					<div style="flex: 70%">
+						<img src="">
+					</div>
+					<div style="flex: 30%" class="feattitle">
+						<div class="featanim">
+							<h2>Project Title</h2>
+							<small>--|Web Development|--</small>
+						</div>
+						<div class="fta">
+							<small>--|Made With|--</small>
+						</div>
+						<div class="featicons">
+							<small><i class="fa fa-html5" aria-hidden="true"></i></small>
+							<small><i class="fa fa-jsfiddle" aria-hidden="true"></i></small>
+						</div>
+						<a style="padding: 8px; margin-left:auto; margin-top:auto" href=""><button class="dwnldbut">View Project</button></a>
+					</div>
+				</div>
+				<div class="featuredcard">
+					<div style="flex: 70%">
+						<img src="">
+					</div>
+					<div style="flex: 30%" class="feattitle">
+						<div class="featanim">
+							<h2>Project Title</h2>
+							<small>--|Web Development|--</small>
+						</div>
+						<div class="fta">
+							<small>--|Made With|--</small>
+						</div>
+						<div class="featicons">
+							<small><i class="fa fa-html5" aria-hidden="true"></i></small>
+							<small><i class="fa fa-jsfiddle" aria-hidden="true"></i></small>
+						</div>
+						<a style="padding: 8px; margin-left:auto; margin-top:auto" href=""><button class="dwnldbut">View Project</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<h2> Available for freelance opportunities.</h2>
+		<div class="footerinner">
+    		<p>Linkedin</p>
+    		<button onclick="topFunction()" id="topbttn" title="Top"><img id="topage" class="toppage" src="SVGs/arrow.svg"></button>
+    		<p style="transform: rotate(180deg)">Github</p>
+    	</div>
+		<h3>2023. Timothy Scruggs-Mitchell.</h3>
+	</div>
+	<script language="javascript">
+
+		let links = Array.from(document.querySelectorAll("a"));
+
+		var icon = document.getElementById("icon");
+		var moonpar = document.getElementById("moonpar");
+		var difcursor = document.getElementById("difcursor");
+		var phrase = document.getElementById("phrase");
+		var topage = document.getElementById("topage");
+
+		const cursor = document.querySelector(".cursor")
+			document.addEventListener('mousemove', (e) => {
+				cursor.style.left = e.clientX + 'px';
+				cursor.style.top = e.clientY + 'px';
+			})
+
+		links.forEach(link =>{
+				link.addEventListener('mouseover', ()=>{
+					cursor.classList.add("grow");
+				})
+				link.addEventListener('mouseleave', ()=>{
+					cursor.classList.remove("grow");
+				})
+			})
+
+		function topFunction(){
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+
+		icon.onclick = function(){
+			document.body.classList.toggle("light-theme");
+			if(document.body.classList.contains("light-theme")){
+				icon.src = "flicks/half-circle.png";
+				topage.src = "SVGs/arrow alt.svg";
+				difcursor.src = "flicks/cursor-alt.png";
+				moonpar.src = "flicks/jupiter.png";
+				phrase.innerHTML = "Ahh..It's too bright! Turn out the lights!";
+			}else{
+				icon.src = "flicks/black-half-circle.png";
+				topage.src = "SVGs/arrow.svg";
+				difcursor.src = "flicks/cursor.png";
+				moonpar.src = "flicks/moon2.png";
+				phrase.innerHTML = "Whew..It's dark in here! Turn the lights on.";
+			}
+		}
+
+	</script>
+</body>
+</html> 

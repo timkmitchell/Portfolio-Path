@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+	<link rel="stylesheet" href="prStyle.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>\Wo.rk</title>
+	<script type="text/javascript" src="js\theAnimation.js"></script>
+</head>
+<body>
+	<div class="cursor"><img src="photos/big-hole.png"></div>
+	<div id="menu" class="hambumenu">
+		<img onclick="showFunction()" class="hma" src="photos/menu.png">
+		<img class="bckgrd" src="photos/big-hole.png">
+		<div id="menu2" class="hambuchoice">
+			<ul>
+				<a href="/index.html"><li>01. home</li></a>
+				<a href="/Work.html"><li class="active">02. work</li></a>
+				<a href="/Aboutme.html"><li>03. about</li></a>
+			</ul>
+		</div>
+	</div>
+	<header id="navbar">
+		<div>
+			<a href="/index.html"><img class="logo" src="photos/logo2.png" alt="logo"></a>
+		</div>
+		<a href="/index.html"><img class="logobckgrd" src="photos/big-hole.png"></a>
+		<nav>
+			<ul class="navigation">
+				<a href="/index.html"><li>01. home</li></a>
+				<a href=""><li class="active"><span class="actsetup" style="--i:1;">0</span>
+				<span class="actsetup" style="--i:2;">2</span>
+				<span class="actsetup" style="--i:3;">.</span>
+				<span class="actsetup" style="--i:4;">w</span>
+				<span class="actsetup" style="--i:5;">o</span>
+				<span class="actsetup" style="--i:6;">r</span>
+				<span class="actsetup" style="--i:7;">k</span></li></a>
+				<a href="/Aboutme.html"><li>03. about</li></a>
+			</ul>
+		</nav>
+		<div>
+			<a href="/index.html#contact"><img class="bckgrd" src="photos/big-hole.png">
+			<button  style="animation-delay: 4s">Contact</button></a>
+		</div>
+	</header>
+
+	<div class="loader">
+		<img class="ldrimg" src="photos/big-hole.png">
+		<div style="animation: 10s linear 0s infinite spin;">
+			<span class="setup" style="--i:1;">L</span>
+			<span class="setup" style="--i:2;">o</span>
+			<span class="setup" style="--i:3;">a</span>
+			<span class="setup" style="--i:4;">d</span>
+			<span class="setup" style="--i:5;">i</span>
+			<span class="setup" style="--i:6;">n</span>
+			<span class="setup" style="--i:7;">g</span>
+			<span class="setup" style="--i:8;">.</span>
+			<span class="setup" style="--i:9;">.</span>
+			<span class="setup" style="--i:10;">.</span>
+		</div>
+	</div>
+	<section>
+		<div id="arrw" class="top">
+				<img onclick="topFunction()" title="Top" class="arrow" src="svgs/arrow alt.svg">
+		</div>
+		<div id="topnum" class="topnum">
+				<h1>02</h1>
+		</div>
+		<div class="wrkbox">
+			<div class="wrkcard">
+				<div class="wrkimg">
+					<img class="wrkimgshow" src="photos/tulonesnew1.jpeg">
+				</div>
+				<a href="/projects/projtulones.html">
+					<h1>Tulones</h1>
+					<p>Web Design & Development</p>
+				</a>
+			</div>
+			<div class="wrkcard">
+				<div class="wrkimg">
+					<img class="wrkimgshow" src="photos/acnew1.jpg">
+				</div>
+				<a href="/projects/projacgroom.html">	
+					<h1>AC Grooming & Boarding</h1>
+					<p>Web Design & Development</p>
+				</a>
+			</div>
+			<div class="wrkcard">
+				<div class="wrkimg">
+					<img class="wrkimgshow" src="photos/asterious4.png">
+				</div>
+				<a href="/projects/projasterious.html">
+					<h1>Asterious</h1>
+					<p>Pygame Project</p>
+				</a>
+			</div>
+			<div class="wrkcard">
+				<div class="wrkimg">
+					<img class="wrkimgshow" src="photos/cheryls.jpg">
+				</div>
+				<a href="/projects/projcherylsvoice.html">
+					<h1>Cheryl's Voice</h1>
+					<p>Web Design & Development</p>
+				</a>
+			</div>
+		</div>
+		<div class="wrkbox">
+			<div class="wrkcard">
+				<div class="wrkimg">
+					<img style="width: 10%;" class="wrkimgshow" src="photos/calcimg.png">
+				</div>
+				<a href="/projects/projjscalc.html">
+					<h1>Calculator</h1>
+					<p>Javascript App</p>
+				</a>
+			</div>
+			<div class="wrkcard">
+				<div class="wrkimg">
+					<img class="wrkimgshow" src="photos/todo.png">
+				</div>
+				<a href="/projects/projtodo.html">
+					<h1>Todo App</h1>
+					<p>App Development</p>
+				</a>
+			</div>
+			<div class="wrkcard">
+				<a href="">
+					<h1>N/A</h1>
+					<p>Coming Soon</p>
+				</a>
+			</div>
+			<div class="wrkcard">
+				<a href="">
+					<h1>N/A</h1>
+					<p>Coming Soon</p>
+				</a>
+			</div>
+		</div>
+	</section>
+	<script language="javascript">
+		let links = Array.from(document.querySelectorAll("a"));
+		var prevScrollpos = window.pageYOffset;
+
+		function topFunction(){
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+
+		function showFunction(){
+			var menu2 = document.getElementById("menu2");
+			if(menu2.style.display == "none"){
+				menu2.style.display = "inline";
+			}else{
+				menu2.style.display = "none";
+			}
+		}
+
+		function hidenavbar() {
+			var currentScrollPos = window.pageYOffset;
+				if (prevScrollpos > currentScrollPos) {
+					document.getElementById("navbar").style.top = "0";
+				}else{
+					document.getElementById("navbar").style.top = "-120px";
+				}
+			prevScrollpos = currentScrollPos;
+		}
+
+		window.onscroll = function() {scrollFunction(), hidenavbar()};
+
+		function scrollFunction() {
+	 		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	    		arrw.style.transform = "rotate(180deg)";
+	  		} else {
+	    		arrw.style.transform = "rotate(0deg)";
+	  		}
+		}
+
+		const cursor = document.querySelector(".cursor")
+			document.addEventListener('mousemove', (e) => {
+				cursor.style.left = e.clientX + 'px';
+				cursor.style.top = e.clientY + 'px';
+			})
+
+		links.forEach(link =>{
+				link.addEventListener('mouseover', ()=>{
+					cursor.classList.add("grow");
+				})
+				link.addEventListener('mouseleave', ()=>{
+					cursor.classList.remove("grow");
+				})
+			})
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('show1');
+				}
+			});
+		});
+
+		const hiddenElements = document.querySelectorAll('.js-scroll');
+		hiddenElements.forEach((el) => observer.observe(el));
+	</script>
+</body>
+</html>
